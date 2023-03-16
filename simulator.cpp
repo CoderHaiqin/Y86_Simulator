@@ -236,7 +236,7 @@ void Simulator::memo()
     if(memRead && memWrite) std::cout << "read and write together";
 
     word addr = 0;
-    if(M.icode == IRRMOVQ || M.icode == IPUSHQ || M.icode == ICALL || M.icode == IMRMOVQ) addr = M.valE;
+    if(M.icode == IRMMOVQ || M.icode == IPUSHQ || M.icode == ICALL || M.icode == IMRMOVQ) addr = M.valE;
     if(M.icode == IPOPQ || M.icode == IRET) addr = M.valA;
 
     word valM = 0;
